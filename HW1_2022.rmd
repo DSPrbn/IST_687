@@ -1,0 +1,256 @@
+---
+jupyter:
+  colab:
+  kernelspec:
+    display_name: R
+    name: ir
+  language_info:
+    name: R
+  nbformat: 4
+  nbformat_minor: 0
+---
+
+::: {.cell .markdown id="S5xKlqTBHL2f"}
+## Intro to Data Science - HW 1
+
+##### Copyright 2022, Jeffrey Stanton, Jeffrey Saltz, and Jasmina Tacheva
+:::
+
+::: {.cell .code id="TDArhKc0HL2g"}
+``` python
+# Enter your name here: 
+```
+:::
+
+::: {.cell .markdown id="cGHitmRjHL2g"}
+### Attribution statement: (choose only one and delete the rest)
+:::
+
+::: {.cell .code id="OD8DkFNXHL2h"}
+``` python
+# 1. I did this homework by myself, with help from the book and the professor.
+# 2. I did this homework with help from the book and the professor and these Internet sources:
+# 3. I did this homework with help from <Name of another student> but did not cut and paste any code.
+```
+:::
+
+::: {.cell .markdown id="wByWQ_c-HL2h"}
+Define a variable:
+:::
+
+::: {.cell .code id="7aFjla_uHL2h"}
+``` python
+value <- 150
+```
+:::
+
+::: {.cell .markdown id="S1PgVuy9ZaCh"}
+Print the content of this new variable:
+:::
+
+::: {.cell .code id="CBVUSYQFZh3f"}
+``` python
+x
+```
+:::
+
+::: {.cell .markdown id="uoi3mEmmHL2i"}
+Define the following vectors, which represent the **hospital capacity**
+(measured in number of hospital beds) and **number of colleges** in each
+of the five counties in Central New York (CNY) -- **Cayuga**,
+**Cortland**, **Madison**, **Onondaga**, and **Oswego**, in this order
+(e.g. the first number in the **capacity** vector suggests there are 124
+hospital beds in Cayuga county):
+:::
+
+::: {.cell .code id="6EotifYEHL2i"}
+``` python
+capacity <- c(124, 70, 51, 1403, 86)
+colleges <- c(2, 2, 3, 9, 2)
+```
+:::
+
+::: {.cell .markdown id="TmQjdH24HL2i"}
+# Part 1: Calculating statistics using R
+:::
+
+::: {.cell .markdown id="52NxYexbHL2j"}
+A. Show the number of observations in the **capacity** vector with the
+length() function:
+:::
+
+::: {.cell .code id="jvgD1j45HL2j"}
+``` python
+length(capacity)
+```
+:::
+
+::: {.cell .markdown id="ufDhv11EHL2j"}
+B. Show the number of observations in the **colleges** vector with the
+length() function:
+:::
+
+::: {.cell .code id="0zMfsQ4gHL2j"}
+``` python
+```
+:::
+
+::: {.cell .markdown id="RXxu154rHL2k"}
+C. Calculate the average number of colleges in CNY using the mean()
+function:
+:::
+
+::: {.cell .code id="ugsYR8rCHL2k"}
+``` python
+```
+:::
+
+::: {.cell .markdown id="segX05F6HL2l"}
+D. Calculate the total number of colleges in CNY using the sum()
+function:
+:::
+
+::: {.cell .code id="jVFDBr3CHL2l"}
+``` python
+```
+:::
+
+::: {.cell .markdown id="ULXspYuJHL2j"}
+E. Calculate the average CNY hospital capacity using the mean()
+function:
+:::
+
+::: {.cell .code id="UOg58jIeYagr"}
+``` python
+```
+:::
+
+::: {.cell .markdown id="9RNBrTK1HL2k"}
+F. Calculate the total hospital capacity in CNY using the sum()
+function:
+:::
+
+::: {.cell .code id="EzytqkgqHL2l"}
+``` python
+```
+:::
+
+::: {.cell .markdown id="41RxK-ZjHL2l"}
+G. Calculate the average number of colleges in CNY again, this time
+using **the results from steps B & D**:
+:::
+
+::: {.cell .code id="muqLZ5B5HL2l"}
+``` python
+```
+:::
+
+::: {.cell .markdown id="m-7vj6y6HL2l"}
+H. Calculate the average CNY hospital capacity again, this time using
+**the results from steps A & F**:
+:::
+
+::: {.cell .code id="FZu31EbIHL2m"}
+``` python
+```
+:::
+
+::: {.cell .markdown id="RETC7Pb_HL2m"}
+# Part 2: Using the max/min and range functions in R
+:::
+
+::: {.cell .markdown id="s2gcH8z-HL2m"}
+I. How many colleges does the county with most colleges have? Hint: Use
+the max() function:
+:::
+
+::: {.cell .code id="dA7clQKuHL2m"}
+``` python
+```
+:::
+
+::: {.cell .markdown id="EwpI86yFHL2m"}
+J. What is the hospital capacity of the county with the smallest number
+of hospital beds in CNY? **Hint:** Use the min() function:
+:::
+
+::: {.cell .code id="HZtjBBPoHL2m"}
+``` python
+```
+:::
+
+::: {.cell .markdown id="z-UdneF1HL2m"}
+K. Display the number of beds in the county with the highest hospital
+capacity and the county with the lowest hospital capacity together,
+using a single command. **Hint:** Use the range() function:
+:::
+
+::: {.cell .code id="MCzwj3mFHL2m"}
+``` python
+```
+:::
+
+::: {.cell .markdown id="ge0TOYQ1HL2n"}
+# Part 3: Vector Math
+:::
+
+::: {.cell .markdown id="lb2y_mUcHL2n"}
+L. Create a new vector called **lowerCap**, which is the current
+hospital capacity of each county **1 10** (each county has 100 more
+hospital beds):
+:::
+
+::: {.cell .code id="6THBDj_jHL2n"}
+``` python
+```
+:::
+
+::: {.cell .markdown id="5hBrL9qrHL2n"}
+M. Calculate the average of **lowerCap**:
+:::
+
+::: {.cell .code id="BgDxBx6KHL2n"}
+``` python
+```
+:::
+
+::: {.cell .markdown id="rxATHYoNZwh4"}
+N. Create another vector called **megaCap**, which is the original
+hospital capacity in each county (stored in **capacity**) plus **value**
+(the variable we declared in the beginning of this assignment).
+:::
+
+::: {.cell .code id="pdDMbtKvaQKL"}
+``` python
+```
+:::
+
+::: {.cell .markdown id="GUjZ8-e7aQhU"}
+O. Print the content of **megaCap**:
+:::
+
+::: {.cell .code id="FR8hk50VaWca"}
+``` python
+```
+:::
+
+::: {.cell .markdown id="M-T4uW3kHL2n"}
+P. In a variable called **bigCap**, store all the hospital numbers from
+the original **capacity** vector which are **greater than 80** (using
+**subsetting** in R):
+:::
+
+::: {.cell .code id="UuLSlpBqHL2n"}
+``` python
+```
+:::
+
+::: {.cell .markdown id="7BLOes79HL2o"}
+Q. Print the length of **bigCap** and explain in a comment how many
+counties have more than 80 hospital beds:
+:::
+
+::: {.cell .code id="ppurVMh4HL2o"}
+``` python
+```
+:::
